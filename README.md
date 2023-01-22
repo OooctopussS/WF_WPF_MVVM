@@ -1,1 +1,3 @@
-# WF_WPF_MVVM
+Windows Form
+Windows Presentation Foundation
+Паттерн MVVM (4 лаба)
