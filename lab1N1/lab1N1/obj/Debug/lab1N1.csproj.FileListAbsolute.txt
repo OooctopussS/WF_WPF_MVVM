@@ -1,0 +1,10 @@
+D:\progSharp\3kurse\lab1N1\lab1N1\bin\Debug\lab1N1.exe.config
+D:\progSharp\3kurse\lab1N1\lab1N1\bin\Debug\lab1N1.exe
+D:\progSharp\3kurse\lab1N1\lab1N1\bin\Debug\lab1N1.pdb
+D:\progSharp\3kurse\lab1N1\lab1N1\obj\Debug\lab1N1.csproj.AssemblyReference.cache
+D:\progSharp\3kurse\lab1N1\lab1N1\obj\Debug\lab1N1.Properties.Resources.resources
+D:\progSharp\3kurse\lab1N1\lab1N1\obj\Debug\lab1N1.csproj.GenerateResource.cache
+D:\progSharp\3kurse\lab1N1\lab1N1\obj\Debug\lab1N1.csproj.CoreCompileInputs.cache
+D:\progSharp\3kurse\lab1N1\lab1N1\obj\Debug\lab1N1.exe
+D:\progSharp\3kurse\lab1N1\lab1N1\obj\Debug\lab1N1.pdb
+D:\progSharp\3kurse\lab1N1\lab1N1\obj\Debug\lab1N1.FTPClient.resources
