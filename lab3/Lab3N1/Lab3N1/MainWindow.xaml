@@ -1,0 +1,48 @@
+﻿<Window x:Class="Lab3N1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab3N1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFE5E5E5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" x:Name="PlanLabel" Content="План выставки: Этажи" FontSize="16" Margin="30,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" x:Name="CurrentLocationLabel" FontSize="16" Margin="30,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden"/>
+        <ListView  Visibility="Visible" x:Name="ExhibitionPlanLevel" Grid.Column="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,30,30,90" SelectionChanged="ExhibitionPlanLevel_SelectionChanged"/>
+        <ListView  Visibility="Hidden" x:Name="ExhibitionPlanHall" Grid.Column="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,60,30,90" SelectionChanged="ExhibitionPlanHall_SelectionChanged"/>
+        <ListView  Visibility="Hidden" x:Name="ExhibitionPlanExhibit" Grid.Column="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,60,30,90" SelectionChanged="ExhibitionPlanExhibit_SelectionChanged"/>
+        <Button Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Content="Назад" Padding="60,0,60,0" Margin="30,0,30,30" Height="40" Click="ButtonBack_Click"/>
+        <Label Grid.Column="1" Content="Добавление элемента" FontSize="16" Margin="30,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <DockPanel Visibility="Visible" x:Name="AddElementLevel" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,30,30,90" Background="White">
+            <Label DockPanel.Dock="Top" Content="Номер этажа" FontSize="14" Margin="30,0,30,0"></Label>
+            <Button DockPanel.Dock="Bottom" Content="Добавить" Padding="10,10,10,10" Click="ButtonLevel_Click"></Button>
+            <TextBox x:Name="LevelNumber" DockPanel.Dock="Top" Margin="30,0,30,0" PreviewTextInput="TextBox_PreviewTextInput"></TextBox>
+            <StackPanel Visibility="Hidden"></StackPanel>
+        </DockPanel>
+        <DockPanel Visibility="Hidden" x:Name="AddElementHall" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,30,30,90" Background="White">
+            <Label DockPanel.Dock="Top" Content="Название зала" FontSize="14" Margin="30,0,30,0"></Label>
+            <Button DockPanel.Dock="Bottom" Content="Добавить" Padding="10,10,10,10" Click="ButtonHall_Click"></Button>
+            <TextBox x:Name="HallName" DockPanel.Dock="Top" Margin="30,0,30,0"></TextBox>
+            <StackPanel Visibility="Hidden"></StackPanel>
+        </DockPanel>
+        <DockPanel Visibility="Hidden" x:Name="AddElementExhibit" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,30,30,90" Background="White">
+            <Label DockPanel.Dock="Top" Content="Название экспоната" FontSize="14" Margin="30,0,30,0"></Label>
+            <Button DockPanel.Dock="Bottom" Content="Добавить" Padding="10,10,10,10" Click="ButtonExhibit_Click"></Button>
+            <TextBox x:Name="ExhibitName" DockPanel.Dock="Top" Margin="30,0,30,15"></TextBox>
+            <Label DockPanel.Dock="Top" Content="Описание экспоната" FontSize="14" Margin="30,0,30,0"></Label>
+            <TextBox x:Name="ExhibitDescription" DockPanel.Dock="Top" Margin="30,0,30,15"></TextBox>
+            <Label DockPanel.Dock="Top" Content="Год создания" FontSize="14" Margin="30,0,30,0"></Label>
+            <TextBox x:Name="ExhibitYear" DockPanel.Dock="Top" Margin="30,0,30,15" PreviewTextInput="TextBox_PreviewTextInput"></TextBox>
+            <Label DockPanel.Dock="Top" Content="Автор" FontSize="14" Margin="30,0,30,0"></Label>
+            <TextBox x:Name="ExhibitAuthor" DockPanel.Dock="Top" Margin="30,0,30,0"></TextBox>
+            <StackPanel Visibility="Hidden"></StackPanel>
+        </DockPanel>
+        <Button Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Deserialize" Padding="60,0,60,0" Margin="30,0,0,30" Height="40" Click="ButtonDeserialize_Click"/>
+        <Button Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Serialize" Padding="60,0,60,0" Margin="0,0,30,30" Height="40" Click="ButtonSerialize_Click"/>
+    </Grid>
+</Window>
