@@ -1,0 +1,37 @@
+﻿<Window x:Class="lab5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:lab5.ViewModels"
+        xmlns:local="clr-namespace:lab5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800"
+        vm:SizeObserver.Observe="True"
+        vm:SizeObserver.ObservedWidth="{Binding WidthWindow, Mode=OneWayToSource}"
+        vm:SizeObserver.ObservedHeight="{Binding HeightWindow, Mode=OneWayToSource}">
+    <Window.InputBindings>
+        <KeyBinding Key="H" Command="{Binding SelectedItemMoveLeftCommand}" CommandParameter="{Binding SelectedItemToDraw}"/>
+        <KeyBinding Key="L" Command="{Binding SelectedItemMoveRightCommand}" CommandParameter="{Binding SelectedItemToDraw}"/>
+        <KeyBinding Key="K" Command="{Binding SelectedItemMoveTopCommand}" CommandParameter="{Binding SelectedItemToDraw}"/>
+        <KeyBinding Key="J" Command="{Binding SelectedItemMoveBottomCommand}" CommandParameter="{Binding SelectedItemToDraw}"/>
+    </Window.InputBindings>
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <DockPanel>
+        <UniformGrid Panel.ZIndex="2" DockPanel.Dock="Bottom" Columns="3">
+            <Button Content="Добавить квадрат" Padding="10,10,10,10" Margin="20, 0, 0, 10" Command="{Binding CreateSquareWithBorderCommand}"></Button>
+            <Button Content="Добавить дорожный знак 'Кирпич'" Margin="20, 0, 20, 10" Command="{Binding CreateStopSignCommand}"></Button>
+            <Button Content="Добавить надпись 'Налево'" Margin="0, 0, 20, 10" Command="{Binding CreateLeftTextCommand}"></Button>
+        </UniformGrid>
+        <DockPanel Panel.ZIndex="2" DockPanel.Dock="Right" Margin="0, 20, 0, 20">
+            <Button DockPanel.Dock="Bottom" Content="Удалить элемент" Padding="0, 10" Command="{Binding DeleteItemToDrawCommand}" CommandParameter="{Binding SelectedItemToDraw}"/>
+            <ListView x:Name="ItemToDrawList"  Width="200" ItemsSource="{Binding ItemsCollectionToDraw}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedItemToDraw}"/>
+        </DockPanel>
+        <ContentControl Panel.ZIndex="1" Content="{Binding CanvasPanel}">
+        </ContentControl>
+
+    </DockPanel>
+
+</Window>
