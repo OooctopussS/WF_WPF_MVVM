@@ -1,3 +1,3 @@
-Windows Form
-Windows Presentation Foundation
-Паттерн MVVM (4 лаба)
+Windows Form  
+Windows Presentation Foundation  
+Паттерн MVVM (4 лаба)  
