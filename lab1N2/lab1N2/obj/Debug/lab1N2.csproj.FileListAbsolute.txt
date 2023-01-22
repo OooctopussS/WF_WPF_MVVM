@@ -1,0 +1,10 @@
+D:\progSharp\3kurse\lab1N2\lab1N2\bin\Debug\lab1N2.exe.config
+D:\progSharp\3kurse\lab1N2\lab1N2\bin\Debug\lab1N2.exe
+D:\progSharp\3kurse\lab1N2\lab1N2\bin\Debug\lab1N2.pdb
+D:\progSharp\3kurse\lab1N2\lab1N2\obj\Debug\lab1N2.csproj.AssemblyReference.cache
+D:\progSharp\3kurse\lab1N2\lab1N2\obj\Debug\lab1N2.Form1.resources
+D:\progSharp\3kurse\lab1N2\lab1N2\obj\Debug\lab1N2.Properties.Resources.resources
+D:\progSharp\3kurse\lab1N2\lab1N2\obj\Debug\lab1N2.csproj.GenerateResource.cache
+D:\progSharp\3kurse\lab1N2\lab1N2\obj\Debug\lab1N2.csproj.CoreCompileInputs.cache
+D:\progSharp\3kurse\lab1N2\lab1N2\obj\Debug\lab1N2.exe
+D:\progSharp\3kurse\lab1N2\lab1N2\obj\Debug\lab1N2.pdb
